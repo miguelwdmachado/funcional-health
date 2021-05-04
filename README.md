@@ -2,6 +2,12 @@
 
 Preparação do ambiente do laradock:
 
+Requerimentos:
+#
+
+Git
+Docker [ >= 17.12 ]
+
 Após a clonagem deste repositório, iniciar uma sessão de terminal e proceder com os seguintes comandos:
 
 cd laradock
