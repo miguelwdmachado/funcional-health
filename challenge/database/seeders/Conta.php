@@ -18,7 +18,7 @@ class Conta extends Seeder
         [
           'id' => 1,
           'agencia_id' => 1,
-          'numero' => '00001',
+          'numero' => '54321',
           'digito' => '0',
           'saldo' => 0,
           'created_at' => date('Y-m-d H:i:s')
