@@ -2,8 +2,7 @@
 
 Preparação do ambiente do laradock:
 
-Requerimentos:
-#
+# Requerimentos:
 
 Git
 Docker [ >= 17.12 ]
