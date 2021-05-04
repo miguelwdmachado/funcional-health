@@ -1,0 +1,731 @@
+{
+	"info": {
+		"_postman_id": "c1449230-a671-4b8a-86d9-cba1a9e8a996",
+		"name": "Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost/api/saldo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "conta",
+							"value": "54321",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/api/saldo",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"saldo"
+					],
+					"query": [
+						{
+							"key": "conta",
+							"value": "54321",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Solicitação de saldo"
+			},
+			"response": [
+				{
+					"name": "Resposta - Sucesso",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "conta",
+									"value": "54321",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/api/saldo",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"saldo"
+							],
+							"query": [
+								{
+									"key": "conta",
+									"value": "54321",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.3.27"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 May 2021 21:13:34 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"success\": true,\n    \"data\": {\n        \"saldo\": 290\n    }\n}"
+				},
+				{
+					"name": "Resposta - Erro - Conta não informada",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "conta",
+									"value": "54321",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/api/saldo",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"saldo"
+							],
+							"query": [
+								{
+									"key": "conta",
+									"value": "54321",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.3.27"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 May 2021 21:30:10 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 500,\n    \"success\": false,\n    \"error\": {\n        \"code\": null,\n        \"message\": \"A conta deve ser informada.\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "localhost/api/depositar",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "conta",
+							"value": "54321",
+							"type": "text"
+						},
+						{
+							"key": "valor",
+							"value": "100",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/api/depositar",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"depositar"
+					],
+					"query": [
+						{
+							"key": "conta",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Solicitação de depósito"
+			},
+			"response": [
+				{
+					"name": "Resposta - Sucesso",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "conta",
+									"value": "54321",
+									"type": "text"
+								},
+								{
+									"key": "valor",
+									"value": "100",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/api/depositar",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"depositar"
+							],
+							"query": [
+								{
+									"key": "conta",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.3.27"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 May 2021 20:55:35 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"success\": true,\n    \"data\": {\n        \"depositar\": {\n            \"conta\": \"54321\",\n            \"saldo\": 330\n        }\n    }\n}"
+				},
+				{
+					"name": "Resposta - Erro - Conta/Valor não informado",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "conta",
+									"value": "54321",
+									"type": "text"
+								},
+								{
+									"key": "valor",
+									"value": "100",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/api/depositar",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"depositar"
+							],
+							"query": [
+								{
+									"key": "conta",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.3.27"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 May 2021 21:31:21 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 500,\n    \"success\": false,\n    \"error\": {\n        \"code\": null,\n        \"message\": \"A conta e o valor devem ser informados.\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "localhost/api/sacar",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "conta",
+							"value": "54321",
+							"type": "text"
+						},
+						{
+							"key": "valor",
+							"value": "300",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/api/sacar",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"sacar"
+					],
+					"query": [
+						{
+							"key": "conta",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Solicitação de saque"
+			},
+			"response": [
+				{
+					"name": "Resposta - Sucesso",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "conta",
+									"value": "54321",
+									"type": "text"
+								},
+								{
+									"key": "valor",
+									"value": "60",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/api/sacar",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"sacar"
+							],
+							"query": [
+								{
+									"key": "conta",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.3.27"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 May 2021 21:16:04 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"success\": true,\n    \"data\": {\n        \"sacar\": {\n            \"conta\": \"54321\",\n            \"saldo\": 230\n        }\n    }\n}"
+				},
+				{
+					"name": "Resposta - Erro - Saldo insuficiente",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "conta",
+									"value": "54321",
+									"type": "text"
+								},
+								{
+									"key": "valor",
+									"value": "300",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/api/sacar",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"sacar"
+							],
+							"query": [
+								{
+									"key": "conta",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.3.27"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 May 2021 21:17:16 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 500,\n    \"success\": false,\n    \"error\": {\n        \"code\": null,\n        \"message\": \"Saldo insuficiente.\"\n    }\n}"
+				},
+				{
+					"name": "Resposta - Erro - Conta/Valor não informado",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "conta",
+									"value": "54321",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "valor",
+									"value": "300",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/api/sacar",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"sacar"
+							],
+							"query": [
+								{
+									"key": "conta",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.3.27"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 May 2021 21:32:25 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 500,\n    \"success\": false,\n    \"error\": {\n        \"code\": null,\n        \"message\": \"A conta e o valor devem ser informados.\"\n    }\n}"
+				}
+			]
+		}
+	]
+}
